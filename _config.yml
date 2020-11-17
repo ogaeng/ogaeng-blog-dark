@@ -60,7 +60,6 @@ markdown: kramdown
 permalink: pretty
 plugins:
   - jekyll-paginate
-  - jekyll-tagging
   - jekyll-sitemap
 
 paginate: 8
