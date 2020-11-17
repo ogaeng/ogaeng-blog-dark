@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /blog/
+Disallow: /projects/
+Disallow: /contact/
+Disallow: /thanks/
+Disallow: /list/
+Disallow: /tag/
+
+Sitemap: https://ogaeng.com/sitemap.xml
+
+DaumWebMasterTool:9db3a370b9bc0a3764da6e87881a21cd1708b3d97e6d95a30445c45b8d428b60:K2yOkbEQnMA1O6ivhqoykw==

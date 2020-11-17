@@ -1,0 +1,126 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Google Tag Manager -->
+  <script>var dataLayer=[];</script>
+
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-K65J7Q');</script>
+	<!-- End Google Tag Manager -->
+
+  <link rel="shortcut icon" href="{{ site.favicon_image }}">
+
+  <title>
+		{%if page.title %}
+			{{ page.title }} | {{ site.title }}
+		{% else %}
+			{{ site.title }} | {{ site.tagline }}
+		{% endif %}
+	</title>
+
+  <!-- SEO Tag -->
+	<meta name="naver-site-verification" content="b6a3b3bdae4205aae14fc55b62b5edecbf37253a"/>
+  <meta name="google-site-verification" content="vQi2V-o180l2xkpSz0icOyLZ4xsopmL--Lsw-Z7aTqA" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	{% if page.title %}
+		<meta property="og:title" content="{{ page.title }}" />
+		<meta name="twitter:title" content="{{ page.title }}" />
+	{% else %}
+		<meta property="og:title" content="{{ site.title }} | {{ site.tagline }}" />
+		<meta name="twitter:title" content="{{ site.title }} | {{ site.tagline }}" />
+	{% endif %}
+	{% if page.title %}
+		<meta property="og:type" content="article" />
+	{% else %}
+		<meta property="og:type" content="website" />
+	{% endif %}
+	{% if page.description %}
+		<meta name="description" content="{{ page.description }}" />
+		<meta property="og:description" content="{{ page.description }}" />
+		<meta name="twitter:description" content="{{ page.description }}" />
+	{% else %}
+		<meta name="description" content="{{ site.description }}" />
+		<meta property="og:description" content="{{ site.description }}" />
+		<meta name="twitter:description" content="{{ site.description }}" />
+	{% endif %}
+	{% if page.url %}
+		<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+		<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+	{% endif %}
+	{% if page.date %}
+		<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+		<meta property="article:author" content="Ogaeng" />
+	{% endif %}
+	{% if page.image %}
+		<meta property="og:image" content="{{ site.url }}/images/thumbnail/{{ page.image }}" />
+		<meta name="twitter:image:src" content="{{ site.url }}/images/thumbnail/{{ page.image }}" />
+	{% else %}
+		<meta property="og:image" content="{{ site.url }}/images/thumbnail/home_thumbnail.png" />
+		<meta name="twitter:image:src" content="{{ site.url }}/images/thumbnail/home_thumbnail.png" />
+	{% endif %}
+		<meta property="og:locale" content="ko_KR" />
+		<meta property="og:site_name" content="{{ site.title }}" />
+	{% if page.categories %}
+		{% for category in page.categories limit:1 %}
+		<meta property="article:section" content="{{ category }}" />
+		{% endfor %}
+	{% endif %}
+	{% if page.tags %}
+		{% for tag in page.tags %}
+		<meta property="article:tag" content="{{ tag }}" />
+		{% endfor %}
+	{% endif %}
+	<meta property="fb:app_id" content="375099709613345" />
+	<!-- End SEO Tag -->
+
+  <!-- Article 구조화된 데이터 Start -->
+	{% if page.title %}
+		<script type="application/ld+json">
+	    {
+	      "@context": "https://schema.org",
+	      "@type": "NewsArticle",
+	      "headline": "{{ page.title }}",
+	      "image": [
+	        "{{ site.url }}/images/thumbnail/{{ page.image }}"
+	       ],
+	      "datePublished": "{{ page.date | date_to_xmlschema }}"
+	    }
+	  </script>
+	{% endif %}
+	<!-- Article 구조화된 데이터 End -->
+
+  <!-- 구조화된 채널 데이터 제출 Start -->
+	<script type="application/ld+json">
+		{
+		 "@context": "http://schema.org",
+		 "@type": "Person",
+		 "name": "Ogaeng | 마개이너",
+		 "url": "https://ogaeng.com",
+		 "sameAs": [
+		   "https://www.facebook.com/ogaeng",
+		   "https://www.linkedin.com/in/ogaeng/"
+		 ]
+		}
+	</script>
+	<!-- 구조화된 채널 데이터 제출 End -->
+
+  <!-- Ionicons -->
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  {% capture include_to_scssify %}
+    {% include main.scss %}
+  {% endcapture %}
+  {{ include_to_scssify | scssify }}
+  </style>
+</head>
