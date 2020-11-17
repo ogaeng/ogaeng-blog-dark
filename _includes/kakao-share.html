@@ -1,0 +1,33 @@
+<!-- Kakao SDK -->
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+<script type='text/javascript'>
+  //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('ab73c8be2bc25ac3e6eafb743f3a053b');
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    function sendLink() {
+      Kakao.Link.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '{{ page.title }}',
+          description: '{{ page.description }}',
+          imageUrl: '{{ site.url }}{{ page.image }}',
+          link: {
+            mobileWebUrl: '{{ site.url }}{{ page.url }}?utm_source=kakaotalk&utm_medium=social&utm_campaign=social_share',
+            webUrl: '{{ site.url }}{{ page.url }}?utm_source=kakaotalk&utm_medium=social&utm_campaign=social_share'
+          }
+        },
+        buttons: [
+          {
+            title: '자세히 보기',
+            link: {
+              mobileWebUrl: '{{ site.url }}{{ page.url }}?utm_source=kakaotalk&utm_medium=social&utm_campaign=social_share',
+              webUrl: '{{ site.url }}{{ page.url }}?utm_source=kakaotalk&utm_medium=social&utm_campaign=social_share'
+            }
+          }
+        ]
+      });
+    }
+  //]]>
+</script>
