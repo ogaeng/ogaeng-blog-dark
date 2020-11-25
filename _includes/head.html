@@ -58,8 +58,8 @@
 		<meta property="article:author" content="Ogaeng" />
 	{% endif %}
 	{% if page.image %}
-		<meta property="og:image" content="{{ site.url }}/images/thumbnail/{{ page.image }}" />
-		<meta name="twitter:image:src" content="{{ site.url }}/images/thumbnail/{{ page.image }}" />
+		<meta property="og:image" content="{{ site.url }}{{ page.image }}" />
+		<meta name="twitter:image:src" content="{{ site.url }}{{ page.image }}" />
 	{% else %}
 		<meta property="og:image" content="{{ site.url }}/images/thumbnail/home_thumbnail_n.jpg" />
 		<meta name="twitter:image:src" content="{{ site.url }}/images/thumbnail/home_thumbnail_n.jpg" />
