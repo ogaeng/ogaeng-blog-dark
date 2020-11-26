@@ -12,15 +12,23 @@ image: '/images/contact.jpg'
     action="{% if site.contact.email %}https://formspree.io/{{site.contact.email}}{% else %}#{% endif %}" method="POST">
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-      <input class="form__input" id="form-name" type="text" name="name" placeholder="이름" required>
+      <input class="form__input" id="form-name" type="text" name="이름" placeholder="이름" required>
     </div>
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="이메일" required>
+      <input class="form__input" id="form-email" type="email" name="이메일" placeholder="이메일" required>
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="form-company">Your Company</label>
+      <input class="form__input" id="form-company" type="text" name="회사" placeholder="회사명">
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="form-website">Website</label>
+      <input class="form__input" id="form-website" type="url" name="웹사이트" placeholder="웹사이트 URL">
     </div>
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="문의 내용을 입력하세요." required></textarea>
+      <textarea class="form__input" id="form-text" name="문의내용" rows="10" placeholder="문의 내용을 입력하세요." required></textarea>
     </div>
     <div class="form__group">
       <button class="button button--primary" type="submit">제출하기</button>
