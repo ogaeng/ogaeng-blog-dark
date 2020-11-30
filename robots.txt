@@ -6,6 +6,7 @@ Disallow: /contact/
 Disallow: /thanks/
 Disallow: /list/
 Disallow: /tag/
+Disallow: /404.html
 
 Sitemap: https://ogaeng.com/sitemap.xml
 

@@ -1,17 +1,35 @@
 ---
-layout: page
-title: Page not found
-image: '/images/140.jpg'
+layout: default
+title: 페이지를 찾을 수 없습니다
 permalink: /404.html
 ---
 
-<div class="container">
-  <div class="row">
-    <div class="col col-12" style="text-align: center">
-      <h2 style="font-size: 48px">404</h2>
-      <p>The requested page could not be found.</p>
-      <p><a href="{{site.baseurl}}/" class="button button--middle" style="text-decoration: none; border: none">Back to the blog</a></p>
-      <hr>
+<!-- begin hero -->
+<section class="hero-without-image">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1 class="hero__title" style="padding-bottom: 5rem;">{{page.title}}</h1>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SIaFtAKnqBU?autoplay=1&start=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
+</section>
+<!-- begin hero -->
+
+<!-- begin page -->
+<div class="container">
+  <article class="page animate">
+    <div class="page__content">
+      <div class="container">
+        <div class="row">
+          <div class="col col-12" style="text-align: center">
+            <h2 style="font-size: 48px">404</h2>
+            <p>요청한 페이지를 찾을 수 없습니다.</p>
+            <p><a href="{{site.baseurl}}/" class="button button--middle" style="text-decoration: none; border: none">블로그로 돌아가기</a></p>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>
+<!-- end page -->
