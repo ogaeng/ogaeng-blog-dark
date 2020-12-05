@@ -6,9 +6,7 @@ author: "Ogaeng"
 permalink: /introduce-mgin/
 content_id: 19
 image: /images/thumbnail/mgin2-thumbnail.jpg
-categories:
-  - 마케팅
-  - 스터디
+categories: [오픈소스마케팅,마개이너]
 tags:
   - 마개이너
   - 디지털마케팅

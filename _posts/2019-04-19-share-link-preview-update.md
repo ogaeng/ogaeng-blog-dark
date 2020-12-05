@@ -6,9 +6,7 @@ date: 2019-04-19 02:00:00 +09:00
 author: "Ogaeng"
 permalink: /share-link-preview-update/
 image: /images/thumbnail/share-link-preview-update_thumbnail.jpg
-categories:
-  - 마케팅
-  - SEO
+categories: SEO
 tags:
   - 미리보기
   - 공유

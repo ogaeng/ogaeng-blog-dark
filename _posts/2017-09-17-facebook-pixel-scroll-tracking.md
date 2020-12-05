@@ -6,9 +6,7 @@ date: 2017-09-17 01:00:00 +09:00
 author: "Ogaeng"
 permalink: /facebook-pixel-scroll-tracking/
 image: /images/thumbnail/facebook-pixel-scroll-tracking_thumbnail.png
-categories:
-  - 마케팅
-  - Facebook
+categories: Facebook
 tags:
   - 페이스북픽셀
   - 스크롤

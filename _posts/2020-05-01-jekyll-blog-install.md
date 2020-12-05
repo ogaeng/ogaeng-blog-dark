@@ -6,8 +6,7 @@ author: "Ogaeng"
 permalink: /jekyll-blog-install/
 content_id: 20
 image: /images/thumbnail/jekyll-thumbnail.jpg
-categories:
-  - Jekyll
+categories: Jekyll
 tags:
   - 블로그
   - Jekyll

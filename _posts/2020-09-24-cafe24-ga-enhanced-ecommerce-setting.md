@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /cafe24-gtm-enhanced-ecommerce-setting/
 content_id: 22
 image: /images/thumbnail/cafe24-gtm-enhanced-ecommerce-setting.jpg
-categories:
-  - 마케팅
-  - GA-GTM
-  - 쇼핑몰
+categories: [카페24,GA,GTM]
 tags:
   - 카페24
   - 전자상거래

@@ -6,9 +6,7 @@ author: "Ogaeng"
 permalink: /facebook-pixel-removed-solution/
 content_id: 16
 image: /images/thumbnail/facebook-pixel-removed-solution.png
-categories:
-  - 마케팅
-  - Facebook
+categories: Facebook
 tags:
   - 페이스북
   - 페이스북픽셀

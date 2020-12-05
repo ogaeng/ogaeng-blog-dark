@@ -6,9 +6,7 @@ date: 2017-11-08 20:16:00 +09:00
 author: "Ogaeng"
 permalink: /facebook-pixel-search-keywords/
 image: /images/thumbnail/facebook-pixel-search-keywords_thumbnail.png
-categories:
-  - 마케팅
-  - Facebook
+categories: Facebook
 tags:
   - 페이스북픽셀
   - 키워드

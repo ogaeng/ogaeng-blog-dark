@@ -6,9 +6,7 @@ date: 2017-10-09 14:30:00 +09:00
 author: "Ogaeng"
 permalink: /facebook-pixel-youtube-tracking/
 image: /images/thumbnail/facebook-pixel-youtube-tracking_thumbnail.png
-categories:
-  - 마케팅
-  - Facebook
+categories: Facebook
 tags:
   - 페이스북픽셀
   - 유튜브

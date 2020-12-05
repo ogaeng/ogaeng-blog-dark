@@ -6,9 +6,7 @@ date: 2019-01-02 01:35:00 +09:00
 author: "Ogaeng"
 permalink: /googleanalytics-filter-daum/
 image: /images/thumbnail/googleanalytics-filter-daum_thumbnail.png
-categories:
-  - 마케팅
-  - GA-GTM
+categories: GA
 tags:
   - GA
   - 다음

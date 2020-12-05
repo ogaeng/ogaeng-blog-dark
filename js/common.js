@@ -71,7 +71,7 @@ $(document).ready(function() {
     resultsContainer: document.getElementById("js-results-container"),
     json: "/search.json",
     searchResultTemplate: '{article}',
-    noResultsText: '<li class="no-results"><h3>No results found</h3></li>'
+    noResultsText: '<li class="no-results"><h3>검색 결과가 없습니다.</h3></li>'
   });
 
 

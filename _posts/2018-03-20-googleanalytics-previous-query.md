@@ -6,9 +6,7 @@ date: 2018-03-21 00:53:00 +09:00
 author: "Ogaeng"
 permalink: /googleanalytics-previous-query/
 image: /images/thumbnail/googleanalytics-previous-query_thumbnail.png
-categories:
-  - 마케팅
-  - GA-GTM
+categories: [GA,GTM]
 tags:
   - GA
   - 네이버키워드

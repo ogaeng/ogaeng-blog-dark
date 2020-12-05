@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /amplitude-scroll-event/
 content_id: 18
 image: /images/thumbnail/amplitude-scroll-event-thumbnail.jpg
-categories:
-  - 마케팅
-  - 분석
-  - Amplitude
+categories: Amplitude
 tags:
   - 웹분석
   - Amplitude

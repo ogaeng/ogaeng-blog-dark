@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /googleanalytics-naver-search/
 content_id: 14
 image: /images/thumbnail/googleanalytics-naver-search_thumbnail.png
-categories:
-  - 마케팅
-  - GA-GTM
-  - 네이버
+categories: [Naver,GTM,GA]
 tags:
   - GA
   - 네이버

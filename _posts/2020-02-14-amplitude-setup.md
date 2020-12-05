@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /amplitude-setup/
 content_id: 17
 image: /images/thumbnail/amplitude-setup-thumbnail.jpg
-categories:
-  - 마케팅
-  - 분석
-  - Amplitude
+categories: Amplitude
 tags:
   - 웹분석
   - Amplitude

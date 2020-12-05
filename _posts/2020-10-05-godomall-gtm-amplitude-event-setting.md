@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /godomall-gtm-amplitude-event-setting/
 content_id: 23
 image: /images/thumbnail/godomall-gtm-amplitude-event-setting.jpg
-categories:
-  - 마케팅
-  - Amplitude
-  - 쇼핑몰
+categories: [고도몰,Amplitude,GTM]
 tags:
   - 고도몰
   - 이벤트

@@ -6,9 +6,7 @@ author: "Ogaeng"
 permalink: /http-referrer/
 content_id: 21
 image: /images/thumbnail/http-referrer.jpg
-categories:
-  - 마케팅
-  - 분석
+categories: 분석
 tags:
   - referrer
   - 유입분석

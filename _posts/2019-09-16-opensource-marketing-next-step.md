@@ -6,9 +6,7 @@ author: "Ogaeng"
 permalink: /opensourcemarketing-nextstep/
 content_id: 15
 image: /images/thumbnail/opensource-marketing-next.png
-categories:
-  - 커뮤니티
-  - 오픈소스마케팅
+categories: [오픈소스마케팅,커뮤니티]
 tags:
   - 오소마
   - 오픈소스마케팅

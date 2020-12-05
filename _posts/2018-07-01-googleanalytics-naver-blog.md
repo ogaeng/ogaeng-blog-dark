@@ -6,10 +6,7 @@ date: 2018-07-01 13:00:00 +09:00
 author: "Ogaeng"
 permalink: /googleanalytics-naver-blog/
 image: /images/thumbnail/googleanalytics-naver-blog_thumbnail.png
-categories:
-  - 마케팅
-  - GA-GTM
-  - 네이버
+categories: [Naver,GA,GTM]
 tags:
   - GA
   - 네이버블로그

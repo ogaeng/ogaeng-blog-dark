@@ -6,10 +6,7 @@ author: "Ogaeng"
 permalink: /godomall-ga4-ecommerce-setting/
 content_id: 24
 image: /images/thumbnail/godomall-ga4-ecommerce-setting.jpg
-categories:
-  - 마케팅
-  - GA-GTM
-  - 쇼핑몰
+categories: [고도몰,GA,GTM]
 tags:
   - 고도몰
   - 이벤트
