@@ -28,6 +28,16 @@ Jekyll은 정적인 웹사이트 생성기로 Ruby라는 언어를 기반으로 
 
 Jekyll을 설치하기 위해선 먼저 컴퓨터에 Ruby가 설치되어 있어야 한다. 루비 설치 방법은 윈도우와 맥 두 가지 버전으로 나누어 설명하겠다.
 
+### M1 Mac 환경(Apple Silicon)에서의 설정
+
+M1 맥을 사용한다면 Ruby와 Jekyll을 설치하기 전에 먼저 로제타를 이용해 터미널을 실행하도록 설정해야 한다.
+![M1 터미널 로제타 설정](/images/post/20/01-m1.jpeg)
+
+1. 응용 프로그램 → 유틸리티 폴더로 들어간다.
+2. 터미널 앱을 마우스 오른쪽 버튼으로 클릭한 뒤 `정보 가져오기`를 누른다.(단축키 cmd + i)
+3. `Rosetta를 사용하여 열기`에 체크한다.
+4. 이제 다음 과정을 진행하자.
+
 ### Mac 환경에서 Ruby와 Jekyll 설치
 
 먼저 터미널(Terminal)을 실행하고 아래와 같이 타이핑해서 루비의 버전을 확인한다.
@@ -102,7 +112,7 @@ gem install jekyll bundler
 
 ### Windows 환경에서 Ruby와 Jekyll 설치
 
-윈도우 환경에서는 먼저 <a onclick="window.open('https://rubyinstaller.org/downloads/', '_blank');">Ruby 다운로드 사이트</a>에 방문하고 '⇒ Ruby+Devkit 2.6.6-1 (x64)'를 다운로드한다.
+윈도우 환경에서는 먼저 <a onclick="window.open('https://rubyinstaller.org/downloads/', '_blank');">Ruby 다운로드 사이트</a>에 방문하고 '⇒ Ruby+Devkit 2.X.X (x64)'를 다운로드한다.
 
 다운로드한 파일을 실행해 설치를 진행하면 된다. 단, 주의할 점은 설치 시 아래와 같은 화면이 나온다면 <code>Use UTF-8 as default external encoding.</code>에 꼭 체크를 하고 넘어간다.
 
