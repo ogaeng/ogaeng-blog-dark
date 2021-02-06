@@ -34,11 +34,11 @@ description: '구글 애널리틱스 소스/매체에 수집되는 naver.com / r
 
 예를 들어 네이버에 접속해서 `ogaeng` 키워드를 입력하고 검색을 하고 나면 네이버 통합검색 결과 페이지로 이동하게 된다. 이때 검색 결과의 페이지의 주소는 다음과 같다.(모바일 웹 기준)
 
-> <span style="font-size:1.3rem">https://m.search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=ogaeng</span>
+> <span style="font-size:0.7em">https://m.search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=ogaeng</span>
 
 여기에 노출된 ogaeng 사이트 링크를 눌러 접속하면 ogaeng 사이트의 리퍼러는 접속 이전 페이지의 주소인 다음의 주소가 된다.
 
-> <span style="font-size:1.3rem">https://m.search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=ogaeng</span>
+> <span style="font-size:0.7em">https://m.search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=ogaeng</span>
 
 하지만 사파리에서는 저 긴 주소를 그대로 리퍼러로 전달하지 않고 `https://m.search.naver.com`까지만 전달하겠다는 내용이다. 그래서 `query=ogaeng`과 같은 키워드 정보를 포함하고 있지 않는다.
 
@@ -52,7 +52,7 @@ description: '구글 애널리틱스 소스/매체에 수집되는 naver.com / r
 
 <table>
   <thead>
-    <th style="width:25%">접속 방법</th>
+    <th style="width:25%">Browser</th>
     <th>리퍼러</th>
     <th>소스/매체</th>
   </thead>
