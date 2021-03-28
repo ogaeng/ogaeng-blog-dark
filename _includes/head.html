@@ -82,14 +82,14 @@
 	<!-- End SEO Tag -->
 
   <!-- Article 구조화된 데이터 Start -->
-	{% if page.title %}
+	{% if page.image %}
 		<script type="application/ld+json">
 	    {
 	      "@context": "https://schema.org",
 	      "@type": "NewsArticle",
 	      "headline": "{{ page.title }}",
 	      "image": [
-	        "{{ site.url }}/images/thumbnail/{{ page.image }}"
+	        "{{ site.url }}{{ page.image }}"
 	       ],
 	      "datePublished": "{{ page.date | date_to_xmlschema }}"
 	    }
