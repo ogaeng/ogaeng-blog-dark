@@ -12,28 +12,5 @@
     pagination_available_pages_number = '{{ paginator.total_pages }}';
 </script>
 
-<!-- Facebook SDK -->
-<script type="text/javascript">
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '375099709613345',
-      cookie     : true,
-      xfbml      : true,
-      version    : 'v4.0'
-    });
-
-    FB.AppEvents.logPageView();
-
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/ko_KR/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
 <!-- MailChimp -->
 <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dd9ee9282b9ae685c06c8c3b9/bcc3f5e89a360e4bccc64e8ef.js");</script>
