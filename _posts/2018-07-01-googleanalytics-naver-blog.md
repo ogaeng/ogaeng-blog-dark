@@ -15,6 +15,8 @@ tags:
 description: GA와 GTM을 이용해 우리 웹사이트에 유입된 네이버 블로그의 아이디와 글주소, 그리고 해당 블로그 글에 접속하기 전에 검색했던 검색어까지 맞춤측정기준을 통해 가져오는 방법을 소개하려고 한다.
 ---
 
+`[업데이트] 2021.07.07 - 네이버 블로그의 아이디와 글 번호를 담는 변수 변경`
+
 우리나라에서 가장 많은 사람들이 사용하는 블로그가 무엇이냐고 물어보면 모든 사람들은 네이버 블로그라고 이야기한다. 그래서 많은 기업들이 네이버 블로그를 만들어 운영하고, 흔히 파워블로거라고 말하는 네이버 블로그를 운영하는 블로거에게 돈을 주고 광고를 의뢰하곤 한다. 하지만 마케팅 담당자 입장에선 비용을 지불한 블로그의 성과를 측정하는 것이 굉장히 어렵다.
 
 구글 애널리틱스(GA)에서 네이버 블로그 유입을 살펴보면 아래와 같은 화면을 마주한다.
@@ -32,9 +34,9 @@ description: GA와 GTM을 이용해 우리 웹사이트에 유입된 네이버 �
 
 ## 작동 원리 이해하기 ##
 
-기본적으로 네이버 블로그의 주소는 'blog.naver.com/아이디/글번호' 의 형태로 이루어져 있다. 브라우저에도 이런 주소의 형태로 보인다. 그런데 왜 우리의 GA에서는 추천 경로가 ''/PostView.nhn'으로 나오는 것일까? 실제로 우리 눈에 보이는 주소는 'blog.naver.com/아이디/글 주소'의 형태이지만 진짜 주소는 아래와 같은 형태로 이루어져 있다.
+기본적으로 네이버 블로그의 주소는 'blog.naver.com/아이디/글번호' 의 형태로 이루어져 있다. 브라우저에도 이런 주소의 형태로 보인다. 그런데 왜 우리의 GA에서는 추천 경로가 ''/PostView.naver'으로 나오는 것일까? 실제로 우리 눈에 보이는 주소는 'blog.naver.com/아이디/글 주소'의 형태이지만 진짜 주소는 아래와 같은 형태로 이루어져 있다.
 
-> blog.naver.com/PostView.nhn?blogId=네이버아이디&logNo=글번호
+> blog.naver.com/PostView.naver?blogId=네이버아이디&logNo=글번호
 
 위 주소를 보면 GA에서 추천 경로가 ''/PostView.nhn'으로 나오는 이유가 수긍이 간다. 그럼 이제 저 주소를 이용해 우리가 원하는 네이버 블로그를 통한 유입의 정보를 알아보자.
 
@@ -74,7 +76,7 @@ GTM에 접속한 후 [변수] → [새로만들기]를 선택하고 [변수 구�
 
 이제 우리가 원하는 네이버 블로그의 아이디와 글 번호를 담는 변수를 만들 차례다. GTM의 미리보기 기능을 이용해 네이버 블로그에서 우리 웹사이트로 넘어오는 Referrer를 확인하면 아래와 같은 형태로 이루어져 있다는 걸 확인할 수 있다.
 
-> https://blog.naver.com/PostView.nhn?blogId=naverid&logNo=123456789000&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true&topReferer=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%EC%95%8C%ED%8C%8C%EC%BD%98&directAccess=false
+> https://blog.naver.com/PostView.naver?blogId=naverid&logNo=123456789000&beginTime=0&jumpingVid=&from=search&redirect=Log&widgetTypeCall=true&topReferer=https%3A%2F%2Fsearch.naver.com%2Fsearch.naver%3Fwhere%3Dnexearch%26sm%3Dtop_hty%26fbm%3D1%26ie%3Dutf8%26query%3D%EC%95%8C%ED%8C%8C%EC%BD%98&directAccess=false
 
 무언가 알 수 없는 말들로 길지만 여기서 우리가 필요한 부분만 뽑아내면 된다. 먼저, GTM으로 이 Referrer 정보에서 블로그 작성자의 네이버 ID와 글 번호를 뽑아내고 '네이버 아이디/글 번호'의 형식으로 변수에 저장한다.
 
@@ -87,19 +89,28 @@ function() {
   var url_string = {{Referrer}};
   var url = new URL(url_string);
   // naverBlogPost by ogaeng.com, CC BY - SA
-  if (referrer_hostname == "blog.naver.com"){
+  if (referrer_hostname == "blog.naver.com" && url.pathname == "/PostView.naver"){
     var blogId = url.searchParams.get('blogId');
     var logNo = url.searchParams.get('logNo');
-    var result = "블로그 - " + blogId + "/" + logNo;
+    var result = referrer_hostname + "/" + blogId + "/" + logNo;
+    return result;
+  } else if (referrer_hostname == "blog.naver.com"){
+    var blog = url["pathname"].substring(1);
+    var result = "blog.naver.com/" + blog;
     return result;
   } else if (referrer_hostname == "m.blog.naver.com" && url.pathname == "/PostView.nhn") {
     var blogId = url.searchParams.get('blogId');
     var logNo = url.searchParams.get('logNo');
-    var result = "M 블로그 - " + blogId + "/" + logNo;
+    var result = referrer_hostname + "/" + blogId + "/" + logNo;
+    return result;
+  } else if (referrer_hostname == "m.blog.naver.com" && url.pathname == "/PostView.naver"){
+    var blogId = url.searchParams.get('blogId');
+    var logNo = url.searchParams.get('logNo');
+    var result = referrer_hostname + "/" + blogId + "/" + logNo;
     return result;
   } else if (referrer_hostname == "m.blog.naver.com"){
     var blog = url["pathname"].substring(1);
-    var result = "M 블로그 - " + blog;
+    var result = "m.blog.naver.com/" + blog;
     return result;
   }
 }
