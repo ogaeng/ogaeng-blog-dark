@@ -3,8 +3,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+	{% include firebase.html %}
 	<!-- Google Tag Manager -->
-  <script>var dataLayer=[];</script>
+  <script>
+		window.dataLayer = window.dataLayer || [];
+		if (browserInfo.indexOf('GA_iOS_WK') > -1 || browserInfo.indexOf('GA_Android') > -1){
+			dataLayer.push({
+				platform: 'app',
+			});
+		} else {
+			dataLayer.push({
+				platform: 'web',
+			});
+		}
+	</script>
 
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
