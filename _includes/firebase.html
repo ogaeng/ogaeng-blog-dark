@@ -63,7 +63,7 @@ function setUserId(uid){
     // Call iOS interface
     var message = {
       command: 'setUserId',
-      value: value
+      value: uid
    };
     window.webkit.messageHandlers.firebase.postMessage(message);
   } else {
