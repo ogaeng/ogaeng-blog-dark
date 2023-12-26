@@ -79,7 +79,7 @@ function setScreenView(title, url){
 
   if (window.AnalyticsWebInterface) {
     // Call Android interface
-    window.AnalyticsWebInterface.setScreenView(title, url);
+    window.AnalyticsWebInterface.setScreenView(title, url, JSON.stringify(params));
   } else if (window.webkit
       && window.webkit.messageHandlers
       && window.webkit.messageHandlers.firebase) {
@@ -87,7 +87,8 @@ function setScreenView(title, url){
     var message = {
       command: 'setScreenView',
       title: title,
-			url: url
+			url: url,
+      parameters: params
    };
     window.webkit.messageHandlers.firebase.postMessage(message);
   } else {
